@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://addons/psx_western_town_kit/models/window_store_model.glb" id="1"]
+
+[sub_resource type="BoxShape3D" id="box0"]
+size = Vector3(1.8400, 2.1150, 0.3000)
+
+[node name="window_store" instance=ExtResource("1")]
+
+[node name="Collision" type="StaticBody3D" parent="window_store"]
+
+[node name="Box" type="CollisionShape3D" parent="window_store/Collision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0000, 1.5425, 0.0300)
+shape = SubResource("box0")
